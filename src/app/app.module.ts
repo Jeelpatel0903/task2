@@ -18,7 +18,7 @@ import { EditformComponent } from './editform/editform.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

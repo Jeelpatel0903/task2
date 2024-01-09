@@ -1,0 +1,15 @@
+<form>
+  <label for="userid">Enter user ID</label>
+  <input type="text" name="userid" id="userid" class="form-control" [ngModel]="editedUserId"><br>
+
+  <label for="userName">Enter user Name</label>
+  <input type="text" name="username" id="userName" class="form-control" [ngModel]="editedUserName"><br>
+
+  <label for="userLocation">Enter user Location</label>
+  <input type="text" name="userlocation" id="userLocation" class="form-control" [(ngModel)]="editedUserLocation"><br>
+
+  <label for="gstNumber">Enter user Gst Number</label>
+  <input type="text" name="usergstnumber" id="gstNumber" class="form-control" [(ngModel)]="editedUserGstNumber">
+
+  <button type="button" class="btn btn-primary" (click)="editUserData()">Edit - data</button>
+</form>

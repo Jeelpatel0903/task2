@@ -15,9 +15,12 @@
         <td>{{item.username}}</td>
         <td>{{item.userlocation}}</td>
         <td>{{item.usergstnumber}}</td>
-        <td><button class="btn btn-danger">Delete</button></td>
-        <td><button class="btn btn-warning">Edit</button></td>
+        <!-- <td><button class="btn btn-danger">Delete</button></td> -->
+        <td><button class="btn btn-warning" (click)="showEditForm(item)">Edit</button></td>
+        <td><button class="btn btn-warning">delete</button></td>
       </tr>
     </tbody>
   </table>
-  
+  <div class="div" *ngIf="showForm">
+    <app-editform [item1]="eduserdata"></app-editform>
+  </div>

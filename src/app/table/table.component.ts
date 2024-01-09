@@ -10,10 +10,15 @@ import { User } from '../datatype';
 export class TableComponent implements OnInit {
 
   @Input() list:User[]=[]
-
   constructor() { }
-
   ngOnInit(): void {
+  }
+
+  eduserdata:any
+  showForm = false;
+  showEditForm(item:User) {
+    this.showForm = true;
+    this.eduserdata = item
   }
 
 }
