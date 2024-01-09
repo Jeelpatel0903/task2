@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>
+        User Form
+        <div class="search-box">
+            <input type="text" onkeydown="searchData()" id="searchInput" class="form-control search-input" placeholder="Search...">
+            <!-- <button  class="btn btn-primary">Search</button> -->
+        </div>
+    </h1>
+    <form #userdataForm="ngForm" (ngSubmit)="AddUserData(userdataForm.value)" >
+        <label for="userid">Enter user ID</label>
+        <input type="text" ngModel name="userid" id="userid" class="form-control"><br>
+        <label for="userName">Enter user Name</label>
+        <input type="text"ngModel name="username" id="userName" class="form-control"><br>
+        <label for="userLocation">Enter user Location</label>
+        <input type="text" ngModel name="userlocation" id="userLocation" class="form-control"><br>
+        <label for="gstNumber">Enter user Gst Number</label>
+        <input type="text"ngModel name="usergstnumber" id="gstNumber" class="form-control">
+        <input type="submit" class="btn btn-primary" value="Add - data">
+    </form>
+
+<app-table [list]="listarray"></app-table>
